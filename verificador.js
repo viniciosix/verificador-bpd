@@ -1,8 +1,8 @@
 const webhookClient = new discord.WebhookClient('webid', 'wevtoken');
  
  
-var bot_id = "id do bot";
-var channel_id = "id de um canal do server do seu bot.";
+var bot_id = "550305758583980042";
+var channel_id = "537433191393525760";
  
 bot.on("message", async message => {
     if(message.author.id == bot_id && message.channel.id == channel_id){
