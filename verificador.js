@@ -1,7 +1,5 @@
 const { WebhookClient } = require('discord.js')
 
-
-
 //crie um webhookno canal que deseja receber os últimos votos e configure essa primeira linha
 const webhookClient = new WebhookClient('id do seu webhook', 'token do seu webhook'); 
  
