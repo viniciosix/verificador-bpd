@@ -8,11 +8,11 @@ const webhookClient = new WebhookClient('id do seu webhook', 'token do seu webho
 let client = { 
 bpd: "550305758583980042",
 channel: "537433191393525760"
-}
+};
 
 //configurar
 
-let page = {link: "link da pagina do seu bot em https://botsparadiscord.com/"} //ex: https://botsparadiscord.com/bots/696447552358449262
+let page = {link: "link da pagina do seu bot em https://botsparadiscord.com/"}; //ex: https://botsparadiscord.com/bots/696447552358449262
 
 bot.on("message", async message => {
     if(message.author.id == client.bpd && message.channel.id == client.channel){
