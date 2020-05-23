@@ -25,12 +25,12 @@ client.on('message', async (message) => {
   bot_name = bot_name.replace('`**.', '');
   bot_name = bot_name.replace(link, '');
   bot_name = bot_name.replace('<>', '');
-  bot_name = bot_name.replace(/(\r\n|\n|\r)/gm, '');
+  bot_user = bot_name.replace(/(\r\n|\n|\r)/gm, '');
     
-  if (bot_name === 'bot tag') { // exemplo: Bots Para Discord#6705
+  if (bot_user === client.user.tag) { // exemplo: Bots Para Discord#6705
     webhook.send(`:thumbsup: \`${message.content.split(' ')[1]}\` votou no bot! :tada:\n${link}`, {
-      username: 'Nome do seu bot', // exemplo: Bots Para Discord
-      avatarURL: 'link da imagem do seu bot' // exemplo: https://cdn.discordapp.com/avatars/550305758583980042/dc10b0561b5ba70bab069fc0b0b88dfb.png
+      username: client.user.username, // exemplo: Bots Para Discord
+      avatarURL: client.user.avatarURL() // exemplo: https://cdn.discordapp.com/avatars/550305758583980042/dc10b0561b5ba70bab069fc0b0b88dfb.png
     });
   }
 });
